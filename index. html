@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Smile Dental Clinic & Implant Centre</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .font-premium {
+            font-family: 'Playfair+Display', serif;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .transformation-card img {
+            transition: transform 0.5s ease;
+        }
+
+        .transformation-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 200px;
+        }
+
+        .accordion-item.active i {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <video autoplay muted loop playsinline class="video-background">
+            <source src="https://videos.pexels.com/video-files/6763242/6763242-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        
+        <div class="relative z-10 text-center px-4" data-aos="fade-up" data-aos-duration="1500">
+            <h1 class="font-premium text-4xl md:text-6xl lg:text-7xl text-white mb-8 drop-shadow-lg">
+                Perfect Smile <br>
+                <span class="text-blue-400">Dental Clinic & Implant Centre</span>
+            </h1>
+            <p class="text-white text-xl md:text-2xl mb-12 max-w-2xl mx-auto opacity-90">
+                Experience world-class dental care with Dr. Salim Akhter
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#appointment" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition duration-300 shadow-xl flex items-center gap-2">
+                    <i class="fas fa-calendar-check"></i> Book Appointment
+                </a>
+                <a href="https://wa.me/917488009646" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold transition duration-300 shadow-xl flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="tel:+917488009646" class="bg-white hover:bg-gray-100 text-blue-600 px-8 py-4 rounded-full font-semibold transition duration-300 shadow-xl flex items-center gap-2">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+                <a href="https://maps.app.goo.gl/8yFhhitzeguf4erz5" target="_blank" class="bg-gray-800 hover:bg-black text-white px-8 py-4 rounded-full font-semibold transition duration-300 shadow-xl flex items-center gap-2">
+                    <i class="fas fa-directions"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <h2 class="font-premium text-3xl md:text-4xl mb-8 text-blue-900">About Our Clinic</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto mb-8"></div>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                Welcome to <strong>Perfect Smile Dental Clinic & Implant Centre</strong>, where we combine advanced dental technology with a gentle, patient-centered approach. Led by <strong>Dr. Salim Akhter</strong>, our clinic is dedicated to providing high-quality dental care in a comfortable and modern environment.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                We believe everyone deserves a beautiful, healthy smile. From routine check-ups to complex dental implants, our team is committed to delivering personalized treatments that meet your unique needs and exceed your expectations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-premium text-3xl md:text-4xl text-center mb-16 text-blue-900" data-aos="fade-up">Our Premium Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card glass-card p-8 rounded-2xl shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tooth text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Dental Implant</h3>
+                    <p class="text-gray-600">Permanent solutions for missing teeth with high-quality implants that look and feel natural.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card glass-card p-8 rounded-2xl shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bacteria-slash text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Root Canal</h3>
+                    <p class="text-gray-600">Advanced root canal treatments to save your natural teeth and relieve pain effectively.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card glass-card p-8 rounded-2xl shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-sparkles text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Teeth Cleaning</h3>
+                    <p class="text-gray-600">Professional scaling and polishing to keep your teeth and gums healthy and clean.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card glass-card p-8 rounded-2xl shadow-lg" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-fill-drip text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Tooth Filling</h3>
+                    <p class="text-gray-600">Aesthetic and durable composite fillings to restore decayed or damaged teeth.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card glass-card p-8 rounded-2xl shadow-lg" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hand-holding-medical text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Tooth Extraction</h3>
+                    <p class="text-gray-600">Painless tooth removal when necessary, performed with the utmost care and precision.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card glass-card p-8 rounded-2xl shadow-lg" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-grin-stars text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Teeth Whitening</h3>
+                    <p class="text-gray-600">Brighten your smile with our professional whitening treatments for instant results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smile Transformation -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-premium text-3xl md:text-4xl text-center mb-16 text-blue-900" data-aos="fade-up">Smile Transformation</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Image 1 -->
+                <div class="transformation-card group overflow-hidden rounded-2xl shadow-xl" data-aos="fade-right">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663730478677/QrdfgQhnUBSQdpvN.png" alt="Before Treatment" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="text-white font-bold text-xl">Before</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <h3 class="text-center font-bold text-gray-700">Damaged Teeth (Before)</h3>
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="transformation-card group overflow-hidden rounded-2xl shadow-xl" data-aos="fade-up">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663730478677/nLULsWOFxbyZYtnL.png" alt="Treatment in Progress" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="text-white font-bold text-xl">During</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <h3 class="text-center font-bold text-gray-700">Treatment in Progress</h3>
+                    </div>
+                </div>
+                <!-- Image 3 -->
+                <div class="transformation-card group overflow-hidden rounded-2xl shadow-xl" data-aos="fade-left">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663730478677/jRheMnYxBDVktzAo.png" alt="After Treatment" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span class="text-white font-bold text-xl">After</span>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <h3 class="text-center font-bold text-gray-700">Healthy Beautiful Smile</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Form -->
+    <section id="appointment" class="py-20 px-4 bg-blue-900 text-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-premium text-3xl md:text-4xl text-center mb-12" data-aos="fade-up">Book Your Appointment</h2>
+            
+            <form id="appointmentForm" class="space-y-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block mb-2 font-medium">Patient Name</label>
+                        <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-gray-300" placeholder="Enter your full name">
+                    </div>
+                    <div>
+                        <label class="block mb-2 font-medium">Mobile Number</label>
+                        <input type="tel" id="mobile" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-gray-300" placeholder="Enter mobile number">
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block mb-2 font-medium">Age</label>
+                        <input type="number" id="age" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-gray-300" placeholder="Enter your age">
+                    </div>
+                    <div>
+                        <label class="block mb-2 font-medium">Preferred Date</label>
+                        <input type="date" id="date" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-gray-300">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block mb-2 font-medium">Problem / Reason for Visit</label>
+                    <input type="text" id="problem" required class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-gray-300" placeholder="e.g. Toothache, Check-up, Cleaning">
+                </div>
+                
+                <div>
+                    <label class="block mb-2 font-medium">Message (Optional)</label>
+                    <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-gray-300" placeholder="Any additional details..."></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-white text-blue-900 font-bold py-4 rounded-lg hover:bg-gray-100 transition duration-300 flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Submit via WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-premium text-3xl md:text-4xl text-center mb-16 text-blue-900" data-aos="fade-up">Find Us Here</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl overflow-hidden shadow-2xl h-[450px]" data-aos="fade-right">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.386765675432!2d85.3213563!3d23.3712345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e1001f336637%3A0x63345873f912f94!2sPerfect%20Smile%20Dental%20Clinic%20%26%20Implant%20Centre!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <div class="space-y-8" data-aos="fade-left">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Our Address</h3>
+                            <p class="text-gray-600">Shop No. 3, R R Plaza, Opposite Santousti Apartment, Vikrant Chowk, Ranchi, Jharkhand</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-clock text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Working Hours</h3>
+                            <p class="text-gray-600">Monday - Sunday: 10:00 AM to 8:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/8yFhhitzeguf4erz5" target="_blank" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition duration-300 shadow-lg">
+                        <i class="fas fa-external-link-alt mr-2"></i> Get Directions on Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="font-premium text-3xl md:text-4xl text-center mb-16 text-blue-900" data-aos="fade-up">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4" data-aos="fade-up">
+                <!-- FAQ 1 -->
+                <div class="accordion-item bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="accordion-header w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold">What are your clinic timings?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-5 text-gray-600">Our clinic is open every day from 10:00 AM to 8:00 PM to serve you better.</p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="accordion-item bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="accordion-header w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold">Do you provide Dental Implants?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-5 text-gray-600">Yes, we specialize in high-quality dental implants and complex implant procedures.</p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="accordion-item bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="accordion-header w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold">Can I book an appointment on WhatsApp?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-5 text-gray-600">Absolutely! You can use our website form or click the floating WhatsApp button to book directly.</p>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="accordion-item bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="accordion-header w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold">Where is the clinic located?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <p class="pb-5 text-gray-600">We are located at Shop No. 3, R R Plaza, Opposite Santousti Apartment, Vikrant Chowk, Ranchi, Jharkhand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-white border-t border-gray-100">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="font-premium text-3xl md:text-4xl mb-12 text-blue-900" data-aos="fade-up">Contact Us</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-blue-50 transition duration-300">
+                    <i class="fas fa-phone-alt text-3xl text-blue-600 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Call Us</h3>
+                    <p class="text-gray-600 mb-6">+91 9123420924</p>
+                    <a href="tel:+917488009646" class="text-blue-600 font-bold hover:underline">Call Now</a>
+                </div>
+                
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-green-50 transition duration-300">
+                    <i class="fab fa-whatsapp text-3xl text-green-500 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">WhatsApp</h3>
+                    <p class="text-gray-600 mb-6">+91 9123420924</p>
+                    <a href="https://wa.me/917488009646" target="_blank" class="text-green-500 font-bold hover:underline">Chat with Us</a>
+                </div>
+                
+                <div class="p-8 rounded-2xl bg-gray-50 hover:bg-blue-50 transition duration-300">
+                    <i class="fas fa-envelope text-3xl text-blue-600 mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Visit Us</h3>
+                    <p class="text-gray-600">Shop No. 3, R R Plaza, Ranchi</p>
+                    <p class="text-gray-600">10:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="lg:col-span-2">
+                <h3 class="font-premium text-2xl mb-6">Perfect Smile Dental Clinic</h3>
+                <p class="text-gray-300 mb-6 max-w-md">Providing the best dental care in Ranchi. Your smile is our priority. Visit us for a complete dental transformation.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center hover:bg-blue-600 transition"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+                <ul class="space-y-4 text-gray-300">
+                    <li><a href="#" class="hover:text-white transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                    <li><a href="#appointment" class="hover:text-white transition">Book Appointment</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-bold text-lg mb-6">Clinic Info</h4>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex items-start gap-2"><i class="fas fa-map-marker-alt mt-1"></i> Ranchi, Jharkhand</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-phone"></i> +91 9123420924</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-clock"></i> 10 AM - 8 PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto border-t border-white border-opacity-10 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 Perfect Smile Dental Clinic & Implant Centre. All rights reserved.</p>
+            <p class="mt-2 text-sm">Designed with care by Dr. Salim Akhter</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917488009646" target="_blank" class="floating-whatsapp bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Appointment Form Submission
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const age = document.getElementById('age').value;
+            const date = document.getElementById('date').value;
+            const problem = document.getElementById('problem').value;
+            const message = document.getElementById('message').value;
+            
+            const whatsappNumber = "917488009646";
+            const text = `*New Appointment Request*%0A%0A` +
+                         `*Name:* ${name}%0A` +
+                         `*Mobile:* ${mobile}%0A` +
+                         `*Age:* ${age}%0A` +
+                         `*Preferred Date:* ${date}%0A` +
+                         `*Problem:* ${problem}%0A` +
+                         `*Message:* ${message}`;
+            
+            window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
+        });
+
+        // Smooth Scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!-- responsive note -->
